@@ -1,0 +1,54 @@
+.header {
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+
+    &__logo {
+        margin-right: 56px;
+    }
+
+    &__link {
+        font-size: 12px;
+        line-height: 15px;
+        text-align: center;
+        text-transform: uppercase;
+        color: var(--header-link-color);
+
+        &--gray {
+            color: rgba(#fff, 0.5)
+        }
+    }
+
+    &__nav {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+    }
+
+    &__social {
+        display: flex;
+        align-items: center;
+        width: 209px;
+        height: 48px;
+        margin-left: auto;
+        background: rgba(#fff, 0.3);
+        backdrop-filter: blur(25px);
+        border-radius: 40px;
+
+        &-text {
+            margin-left: 24px;
+            margin-right: 24px;
+        }
+
+        &-link {
+            width: 24px;
+            height: 24px;
+            background: url('../icons/promo/twitter.svg') center (center/cover) no-repeat;
+            margin-right: 16px;
+            &:last-child {
+                background-image: url('../icons/promo/discord.svg');
+                margin-right: 0;
+            }
+        }
+    }
+}
