@@ -1,0 +1,9 @@
+.teaser {
+    background: var(--section-color);
+    position: relative;
+
+    &__container {
+        padding-top: 192px;
+        padding-bottom: 96px;
+    }
+}

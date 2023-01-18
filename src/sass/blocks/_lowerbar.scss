@@ -1,12 +1,12 @@
 .lowerbar {
     position: fixed;
     bottom: 0;
+    z-index: 1;
     width: 100%;
     background: rgba(17, 17, 17, 0.8);
     backdrop-filter: blur(25px);
 
     &__container {
-        position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
