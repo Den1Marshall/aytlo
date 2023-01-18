@@ -39,11 +39,15 @@ a {
     text-decoration: none;
     transition: opacity .1s;
     &:hover {
-        opacity: .5;
+        opacity: .4;
     }
     &:focus {
-        opacity: .5;
+        opacity: .4;
     }
+}
+
+:focus {
+    outline: 1px solid #ccc;
 }
 
 button {

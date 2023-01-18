@@ -1,0 +1,29 @@
+.fadeOut_01s {
+    animation: fadeOut .1s ease-in-out 1 normal forwards;
+}
+
+.fadeOut_02s {
+    animation: fadeOut .2s ease-in-out 1 normal forwards;
+}
+
+.fadeOut_03s {
+    animation: fadeOut .3s ease-in-out 1 normal forwards;
+}
+
+.fadeOut_04s {
+    animation: fadeOut .4s ease-in-out 1 normal forwards;
+}
+
+.fadeOut_05s {
+    animation: fadeOut .5s ease-in-out 1 normal forwards;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}

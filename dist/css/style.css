@@ -356,10 +356,14 @@ a {
   transition: opacity 0.1s;
 }
 a:hover {
-  opacity: 0.5;
+  opacity: 0.4;
 }
 a:focus {
-  opacity: 0.5;
+  opacity: 0.4;
+}
+
+:focus {
+  outline: 1px solid #ccc;
 }
 
 button {
@@ -388,6 +392,48 @@ button {
   font-family: "Druk-Wide";
   src: local("Druk-Wide"), url("../fonts/Druk-Wide-Medium-Regular.woff2") format("woff2"), url("../fonts/Druk-Wide-Medium-Regular.woff") format("woff"), url("../fonts/Druk-Wide-Medium-Regular.ttf") format("truetype");
   font-weight: 500;
+}
+.fadeOut_01s {
+  -webkit-animation: fadeOut 0.1s ease-in-out 1 normal forwards;
+          animation: fadeOut 0.1s ease-in-out 1 normal forwards;
+}
+
+.fadeOut_02s {
+  -webkit-animation: fadeOut 0.2s ease-in-out 1 normal forwards;
+          animation: fadeOut 0.2s ease-in-out 1 normal forwards;
+}
+
+.fadeOut_03s {
+  -webkit-animation: fadeOut 0.3s ease-in-out 1 normal forwards;
+          animation: fadeOut 0.3s ease-in-out 1 normal forwards;
+}
+
+.fadeOut_04s {
+  -webkit-animation: fadeOut 0.4s ease-in-out 1 normal forwards;
+          animation: fadeOut 0.4s ease-in-out 1 normal forwards;
+}
+
+.fadeOut_05s {
+  -webkit-animation: fadeOut 0.5s ease-in-out 1 normal forwards;
+          animation: fadeOut 0.5s ease-in-out 1 normal forwards;
+}
+
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
 .no-webp .promo {
   background: url("../img/promo/bg.jpg") center center/cover no-repeat; }
