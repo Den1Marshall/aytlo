@@ -1,8 +1,26 @@
 @font-face {
-    font-family: "CHANGETHIS";
-    src: local("CHANGETHIS"),
-      url("../fonts/CHANGETHIS.woff2") format("woff2"),
-      url("../fonts/CHANGETHIS.woff") format("woff"),
-      url("../fonts/CHANGETHIS.ttf") format("truetype");
-      font-weight: CHANGETHIS;
+  font-family: "Druk-Wide";
+  src: local("Druk-Wide"),
+    url("../fonts/Druk-Wide-Heavy.woff2") format("woff2"),
+    url("../fonts/Druk-Wide-Heavy.woff") format("woff"),
+    url("../fonts/Druk-Wide-Heavy.ttf") format("truetype");
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: "Druk-Wide";
+    src: local("Druk-Wide"),
+      url("../fonts/Druk-Wide-Bold.woff2") format("woff2"),
+      url("../fonts/Druk-Wide-Bold.woff") format("woff"),
+      url("../fonts/Druk-Wide-Bold.ttf") format("truetype");
+      font-weight: 700;
+  }
+
+  @font-face {
+    font-family: "Druk-Wide";
+    src: local("Druk-Wide"),
+      url("../fonts/Druk-Wide-Medium-Regular.woff2") format("woff2"),
+      url("../fonts/Druk-Wide-Medium-Regular.woff") format("woff"),
+      url("../fonts/Druk-Wide-Medium-Regular.ttf") format("truetype");
+      font-weight: 500;
   }
