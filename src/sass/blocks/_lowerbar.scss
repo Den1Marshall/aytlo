@@ -1,0 +1,47 @@
+.lowerbar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: rgba(17, 17, 17, 0.8);
+    backdrop-filter: blur(25px);
+
+    &__container {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 0;
+    }
+
+    &__icon {
+        margin-right: 16px;
+    }
+
+    &__text {
+        margin-right: 32px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        color: #fff;
+    }
+
+    &__link {
+        padding: 12px 24px;
+        width: 167px;
+        height: 39px;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 30px;
+        // text
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 15px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #FFF;
+    }
+
+    &__close {
+        position: absolute;
+        right: 0;
+    }
+}

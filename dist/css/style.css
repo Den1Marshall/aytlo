@@ -362,6 +362,12 @@ a:focus {
   opacity: 0.5;
 }
 
+button {
+  background: rgba(0, 0, 0, 0);
+  border: 0;
+  cursor: pointer;
+}
+
 .container {
   max-width: 1870px;
   padding: 0 15px;
@@ -442,17 +448,72 @@ a:focus {
 .header__social-link {
   width: 24px;
   height: 24px;
-  background: url("../icons/promo/twitter.svg") center center/cover no-repeat;
+  background: url("../icons/header/twitter.svg") center center/cover no-repeat;
   margin-right: 16px;
 }
 .header__social-link:last-child {
-  background-image: url("../icons/promo/discord.svg");
+  background-image: url("../icons/header/discord.svg");
   margin-right: 0;
 }
 
 .logo {
   width: 117px;
   height: 48px;
+}
+
+.lowerbar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: rgba(17, 17, 17, 0.8);
+  -webkit-backdrop-filter: blur(25px);
+          backdrop-filter: blur(25px);
+}
+.lowerbar__container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px 0;
+}
+.lowerbar__icon {
+  margin-right: 16px;
+}
+.lowerbar__text {
+  margin-right: 32px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #fff;
+}
+.lowerbar__link {
+  padding: 12px 24px;
+  width: 167px;
+  height: 39px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFF;
+}
+.lowerbar__close {
+  position: absolute;
+  right: 0;
+}
+
+.close-btn {
+  width: 24px;
+  height: 24px;
+  background: url("../icons/lowerbar/close-btn.svg") center center/cover no-repeat;
 }
 
 @media (max-width: 1200px) {
