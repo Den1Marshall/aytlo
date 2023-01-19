@@ -84,6 +84,47 @@
             }
         }
     }
+
+    .roadmap {
+        &__container {
+            padding-top: 40px;
+            padding-bottom: 80px;
+        }
+
+        &__title {
+            margin-bottom: 40px;
+        }
+
+        .accordion {
+            grid-template-columns: 1fr;
+            gap: 16px;
+
+            &__right {
+                grid-column: 1/1;
+                min-height: 599px;
+            }
+
+            &__left {
+                justify-content: flex-start;
+            }
+
+            &__item-header {
+                padding: 20px 20px 16px 20px;
+                font-size: 15px;
+                line-height: 18px;
+                &::after {
+                    top: 20px;
+                    right: 27px;
+                }
+            }
+
+            &__item-text {
+                padding: 0 20px 20px 20px;
+                font-size: 12px;
+                line-height: 18px;
+            }
+        }
+    }
 }
 
 // large mobiles

@@ -13,6 +13,9 @@
         justify-content: center;
         align-items: center;
         gap: 24px;
+        &:hover {
+            cursor: url('../icons/cursor.svg'), auto;
+        }
     }
 
     &__card {
@@ -23,7 +26,6 @@
         color: #FFF;
         transition: all .3s;
         &:hover {
-            cursor: url('../icons/cursor.svg'), auto;
             background: #fff;
             color: #111;
             .characters__card-text {
@@ -31,7 +33,6 @@
             }
         }
         &:focus {
-            cursor: url('../icons/cursor.svg'), auto;
             background: #fff;
             color: #111;
             .characters__card-text {

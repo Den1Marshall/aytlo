@@ -336,7 +336,7 @@ html {
 
 :root {
   --header-link-color: #fff;
-  --section-color: #19181D;
+  --section-color: #111;
 }
 
 body {
@@ -736,6 +736,9 @@ button {
           align-items: center;
   gap: 24px;
 }
+.characters__cards:hover {
+  cursor: url("../icons/cursor.svg"), auto;
+}
 .characters__card {
   width: 442px;
   height: 646px;
@@ -747,7 +750,6 @@ button {
   transition: all 0.3s;
 }
 .characters__card:hover {
-  cursor: url("../icons/cursor.svg"), auto;
   background: #fff;
   color: #111;
 }
@@ -755,7 +757,6 @@ button {
   color: #111;
 }
 .characters__card:focus {
-  cursor: url("../icons/cursor.svg"), auto;
   background: #fff;
   color: #111;
 }
@@ -779,6 +780,136 @@ button {
   line-height: 18px;
   text-align: justify;
   color: rgba(255, 255, 255, 0.4);
+}
+
+.roadmap__container {
+  padding-top: 96px;
+  padding-bottom: 192px;
+}
+.roadmap__title {
+  margin-bottom: 80px;
+}
+
+.accordion {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(100px, 609px))[2];
+  grid-template-columns: repeat(2, minmax(100px, 609px));
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 8px;
+}
+.accordion__left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 8px;
+}
+.no-webp .accordion__right {
+  background: url("../img/accordion/right/1.jpg") center right/contain no-repeat #19181D; }
+.accordion__right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 40px;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+}
+.accordion__right-text {
+  max-width: 307px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 19px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.4);
+}
+.accordion__right-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 213px;
+  height: 48px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(25px);
+          backdrop-filter: blur(25px);
+  border-radius: 40px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #FFF;
+  opacity: 0.4;
+}
+.accordion__item {
+  position: relative;
+  min-height: 64px;
+  background: #19181D;
+}
+.accordion__item-header {
+  padding: 40px 104px 40px 40px;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.4);
+}
+.accordion__item-header::after {
+  content: "";
+  position: absolute;
+  right: 40px;
+  top: 40px;
+  width: 24px;
+  height: 24px;
+  background: url("../icons/accordion/arrow.svg") center center/cover no-repeat;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+}
+.accordion__item-header--active {
+  color: #fff;
+}
+.accordion__item-header--active::after {
+  -webkit-transform: rotate(-180deg);
+      -ms-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+.accordion__item-body {
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 0.4s;
+  -o-transition: max-height 0.4s;
+  transition: max-height 0.4s;
+}
+.accordion__item-text {
+  padding: 0 104px 76px 40px;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 18px;
+  text-align: justify;
+  color: rgba(255, 255, 255, 0.4);
+  opacity: 0.7;
 }
 
 @media (max-width: 1200px) {
@@ -848,6 +979,42 @@ button {
   .characters__card-text {
     color: #111;
   }
+  .roadmap__container {
+    padding-top: 40px;
+    padding-bottom: 80px;
+  }
+  .roadmap__title {
+    margin-bottom: 40px;
+  }
+  .roadmap .accordion {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .roadmap .accordion__right {
+    -ms-grid-column: 1;
+    grid-column: 1/1;
+    min-height: 599px;
+  }
+  .roadmap .accordion__left {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .roadmap .accordion__item-header {
+    padding: 20px 20px 16px 20px;
+    font-size: 15px;
+    line-height: 18px;
+  }
+  .roadmap .accordion__item-header::after {
+    top: 20px;
+    right: 27px;
+  }
+  .roadmap .accordion__item-text {
+    padding: 0 20px 20px 20px;
+    font-size: 12px;
+    line-height: 18px;
+  }
 }
 @media (max-width: 768px) {
   .container {
@@ -867,6 +1034,7 @@ button {
   }
 }
 .webp .promo { background: url(../img/promo/bg.webp) center center/cover no-repeat; }
+.webp .accordion__right { background: url(../img/accordion/right/1.webp) center right/contain no-repeat #19181D; }
 @media (max-width: 768px) {
   .webp .promo { background-image: url(../img/promo/bg-mobile.webp); }
 }

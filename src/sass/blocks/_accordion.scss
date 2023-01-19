@@ -1,0 +1,98 @@
+.accordion {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(100px, 609px));
+    justify-content: center;
+    gap: 8px;
+
+    &__left {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 8px;
+    }
+
+    &__right {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 40px;
+        background: url('../img/accordion/right/1.jpg') center (right/contain) no-repeat #19181D;
+        transition: all .4s;
+
+        &-text {
+            max-width: 307px;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 19px;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        &-btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 213px;
+            height: 48px;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(25px);
+            border-radius: 40px;
+            // text
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 15px;
+            text-transform: uppercase;
+            color: #FFF;
+            opacity: 0.4;
+        }
+    }
+
+    &__item {
+        position: relative;
+        min-height: 64px;
+        background: #19181D;
+
+
+        &-header {
+            padding: 40px 104px 40px 40px;
+            font-size: 20px;
+            line-height: 24px;
+            letter-spacing: -0.02em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.4);
+            &::after {
+                content: "";
+                position: absolute;
+                right: 40px;
+                top: 40px;
+                width: 24px;
+                height: 24px;
+                background: url('../icons/accordion/arrow.svg') center (center/cover) no-repeat;
+                transition: all .4s;
+            }
+
+            &--active {
+                color: #fff;
+                &::after {
+                    transform: rotate(-180deg);
+                }
+            }
+        }
+
+        &-body {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height .4s;
+        }
+
+        &-text {
+            padding: 0 104px 76px 40px;
+            font-weight: 500;
+            font-size: 13px;
+            line-height: 18px;
+            text-align: justify;
+            color: rgba(255, 255, 255, 0.4);
+            opacity: 0.7;
+        }
+    }
+}

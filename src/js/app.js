@@ -2,11 +2,13 @@ import isWebp from './modules/isWebp';
 import lowerbarAddEventListeners from './modules/lowerbar';
 import headerMobile from './modules/headerMobile';
 import charactersCards from './modules/charactersCards';
+import accordion from './modules/accordion';
 
 isWebp()
 lowerbarAddEventListeners()
 headerMobile()
 charactersCards()
+accordion()
 
 tns({
     container: '.characters__cards',
@@ -14,7 +16,7 @@ tns({
     nav: false,
     mousedrag: true,
     loop: false,
-    arrowKeys: true,
+    preventScrollOnTouch: 'auto',
     responsive: {
         375: {
             items: 1,
