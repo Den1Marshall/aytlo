@@ -10,6 +10,58 @@
     .container {
         max-width: 720px;
     }
+
+    .promo {
+        .header {
+            display: none;
+        }
+    }
+
+    .lowerbar {
+        background: rgba(17, 17, 17, 0.6);
+
+        &__container {
+            position: relative;
+            flex-wrap: wrap;
+            width: 375px;
+            padding: 20px;
+        }
+
+        &__icon {
+            width: 32px;
+            height: 32px;
+            margin-right: 10px;
+            margin-bottom: auto;
+            padding: 4px;
+        }
+
+        &__text {
+            max-width: 293px;
+            margin: 0;
+            margin-bottom: 20px;
+            font-size: 12px;
+            line-height: 15px;
+        }
+
+        &__link {
+            width: 335px;
+            height: 55px;
+        }
+
+        &__close {
+            top: 20px;
+            right: 20px;
+        }
+    }
+
+    .header-mobile {
+        display: flex;
+    }
+
+    .teaser {
+        padding-top: 80px;
+        padding-bottom: 40px;
+    }
 }
 
 // large mobiles
@@ -17,12 +69,16 @@
     .container {
         max-width: 540px;
     }
+
+    .promo {
+        background-image: url('../img/promo/bg-mobile.jpg');
+    }
 }
 
 // small devices
 @media (max-width: 576px) {
     .container {
         width: 100%;
-        padding: 0 10px;
+        padding: initial 10px;
     }
 }

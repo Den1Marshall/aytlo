@@ -16,6 +16,10 @@
     }
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 :root {
     --header-link-color: #fff;
     --section-color: #19181D;
@@ -48,7 +52,11 @@ a {
 }
 
 :focus {
-    outline: 1px solid #ccc;
+
+}
+
+:focus {
+    outline: 0;
 }
 
 button {

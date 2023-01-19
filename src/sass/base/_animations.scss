@@ -1,21 +1,41 @@
 .fadeOut_01s {
-    animation: fadeOut .1s ease-in-out 1 normal forwards;
+    animation: fadeOut .1s linear 1 normal;
 }
 
 .fadeOut_02s {
-    animation: fadeOut .2s ease-in-out 1 normal forwards;
+    animation: fadeOut .2s linear 1 normal;
 }
 
 .fadeOut_03s {
-    animation: fadeOut .3s ease-in-out 1 normal forwards;
+    animation: fadeOut .3s linear 1 normal;
 }
 
 .fadeOut_04s {
-    animation: fadeOut .4s ease-in-out 1 normal forwards;
+    animation: fadeOut .4s linear 1 normal;
 }
 
 .fadeOut_05s {
-    animation: fadeOut .5s ease-in-out 1 normal forwards;
+    animation: fadeOut .5s linear 1 normal;
+}
+
+.fadeIn_01s {
+    animation: fadeIn .1s linear 1 normal;
+}
+
+.fadeIn_02s {
+    animation: fadeIn .2s linear 1 normal;
+}
+
+.fadeIn_03s {
+    animation: fadeIn .3s linear 1 normal;
+}
+
+.fadeIn_04s {
+    animation: fadeIn .4s linear 1 normal;
+}
+
+.fadeIn_05s {
+    animation: fadeIn .5s linear 1 normal;
 }
 
 @keyframes fadeOut {
@@ -25,5 +45,15 @@
 
     to {
         opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
     }
 }

@@ -330,6 +330,10 @@ template {
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --header-link-color: #fff;
   --section-color: #19181D;
@@ -364,7 +368,7 @@ a:focus {
 }
 
 :focus {
-  outline: 1px solid #ccc;
+  outline: 0;
 }
 
 button {
@@ -395,28 +399,53 @@ button {
   font-weight: 500;
 }
 .fadeOut_01s {
-  -webkit-animation: fadeOut 0.1s ease-in-out 1 normal forwards;
-          animation: fadeOut 0.1s ease-in-out 1 normal forwards;
+  -webkit-animation: fadeOut 0.1s linear 1 normal;
+          animation: fadeOut 0.1s linear 1 normal;
 }
 
 .fadeOut_02s {
-  -webkit-animation: fadeOut 0.2s ease-in-out 1 normal forwards;
-          animation: fadeOut 0.2s ease-in-out 1 normal forwards;
+  -webkit-animation: fadeOut 0.2s linear 1 normal;
+          animation: fadeOut 0.2s linear 1 normal;
 }
 
 .fadeOut_03s {
-  -webkit-animation: fadeOut 0.3s ease-in-out 1 normal forwards;
-          animation: fadeOut 0.3s ease-in-out 1 normal forwards;
+  -webkit-animation: fadeOut 0.3s linear 1 normal;
+          animation: fadeOut 0.3s linear 1 normal;
 }
 
 .fadeOut_04s {
-  -webkit-animation: fadeOut 0.4s ease-in-out 1 normal forwards;
-          animation: fadeOut 0.4s ease-in-out 1 normal forwards;
+  -webkit-animation: fadeOut 0.4s linear 1 normal;
+          animation: fadeOut 0.4s linear 1 normal;
 }
 
 .fadeOut_05s {
-  -webkit-animation: fadeOut 0.5s ease-in-out 1 normal forwards;
-          animation: fadeOut 0.5s ease-in-out 1 normal forwards;
+  -webkit-animation: fadeOut 0.5s linear 1 normal;
+          animation: fadeOut 0.5s linear 1 normal;
+}
+
+.fadeIn_01s {
+  -webkit-animation: fadeIn 0.1s linear 1 normal;
+          animation: fadeIn 0.1s linear 1 normal;
+}
+
+.fadeIn_02s {
+  -webkit-animation: fadeIn 0.2s linear 1 normal;
+          animation: fadeIn 0.2s linear 1 normal;
+}
+
+.fadeIn_03s {
+  -webkit-animation: fadeIn 0.3s linear 1 normal;
+          animation: fadeIn 0.3s linear 1 normal;
+}
+
+.fadeIn_04s {
+  -webkit-animation: fadeIn 0.4s linear 1 normal;
+          animation: fadeIn 0.4s linear 1 normal;
+}
+
+.fadeIn_05s {
+  -webkit-animation: fadeIn 0.5s linear 1 normal;
+          animation: fadeIn 0.5s linear 1 normal;
 }
 
 @-webkit-keyframes fadeOut {
@@ -434,6 +463,22 @@ button {
   }
   to {
     opacity: 0;
+  }
+}
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 .no-webp .promo {
@@ -503,6 +548,91 @@ button {
   margin-right: 0;
 }
 
+.header-mobile {
+  position: fixed;
+  top: 16px;
+  left: 50%;
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 343px;
+  height: 64px;
+  padding: 14px 20px;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background: rgba(17, 17, 17, 0.6);
+  -webkit-backdrop-filter: blur(25px);
+          backdrop-filter: blur(25px);
+  border-radius: 40px;
+  z-index: 1;
+}
+.header-mobile--no-bg {
+  background: none;
+}
+.header-mobile__menu-btn {
+  width: 32px;
+  height: 32px;
+  background: url("../icons/header-mobile/menu.svg") center center/cover no-repeat;
+  margin-right: 76px;
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: -webkit-transform 0.4s;
+  -o-transition: transform 0.4s;
+  transition: transform 0.4s;
+  transition: transform 0.4s, -webkit-transform 0.4s;
+}
+.header-mobile__menu-btn--active {
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+.header-mobile__logo {
+  width: 88px;
+  height: 36px;
+  margin-right: 43px;
+}
+.header-mobile__link:not(:last-child) {
+  margin-right: 16px;
+}
+
+.header-mobile__menu {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  gap: 32px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #181818;
+  opacity: 0;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+}
+.header-mobile__menu--active {
+  opacity: 1;
+  z-index: 0;
+}
+.header-mobile__menu-link {
+  font-size: 20px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #FFF;
+}
+
 .logo {
   width: 117px;
   height: 48px;
@@ -540,7 +670,15 @@ button {
   color: #fff;
 }
 .lowerbar__link {
-  padding: 12px 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 167px;
   height: 39px;
   background: rgba(255, 255, 255, 0.2);
@@ -554,7 +692,7 @@ button {
 }
 .lowerbar__close {
   position: absolute;
-  right: 0;
+  right: 40px;
 }
 
 .close-btn {
@@ -565,11 +703,9 @@ button {
 
 .teaser {
   background: var(--section-color);
-  position: relative;
-}
-.teaser__container {
   padding-top: 192px;
   padding-bottom: 96px;
+  padding: 0 40px;
 }
 
 @media (max-width: 1200px) {
@@ -581,16 +717,65 @@ button {
   .container {
     max-width: 720px;
   }
+  .promo .header {
+    display: none;
+  }
+  .lowerbar {
+    background: rgba(17, 17, 17, 0.6);
+  }
+  .lowerbar__container {
+    position: relative;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 375px;
+    padding: 20px;
+  }
+  .lowerbar__icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+    margin-bottom: auto;
+    padding: 4px;
+  }
+  .lowerbar__text {
+    max-width: 293px;
+    margin: 0;
+    margin-bottom: 20px;
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .lowerbar__link {
+    width: 335px;
+    height: 55px;
+  }
+  .lowerbar__close {
+    top: 20px;
+    right: 20px;
+  }
+  .header-mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .teaser {
+    padding-top: 80px;
+    padding-bottom: 40px;
+  }
 }
 @media (max-width: 768px) {
   .container {
     max-width: 540px;
   }
+  .no-webp .promo {
+    background-image: url("../img/promo/bg-mobile.jpg"); }
 }
 @media (max-width: 576px) {
   .container {
     width: 100%;
-    padding: 0 10px;
+    padding: initial 10px;
   }
 }
 .webp .promo { background: url(../img/promo/bg.webp) center center/cover no-repeat; }
+@media (max-width: 768px) {
+  .webp .promo { background-image: url(../img/promo/bg-mobile.webp); }
+}

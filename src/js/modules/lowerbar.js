@@ -5,15 +5,13 @@ export default () => {
 
     lowerbarLink.addEventListener('click', () => {
         lowerbar.classList.add('fadeOut_04s')
-        setTimeout(() => {
-            lowerbar.style.display = 'none'
-        }, 500);
     })
 
     lowerbarClose.addEventListener('click', () => {
-        lowerbar.classList.add('fadeOut_05s')
-        setTimeout(() => {
-            lowerbar.style.display = 'none'
-        }, 500);
+        lowerbar.classList.add('fadeOut_04s')
+    })
+
+    lowerbar.addEventListener('animationend', () => {
+        lowerbar.style.display = 'none'
     })
 }
