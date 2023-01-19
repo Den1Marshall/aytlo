@@ -342,6 +342,7 @@ html {
 body {
   font-family: "Druk-Wide", sans-serif;
   font-weight: 700;
+  background: var(--section-color);
 }
 
 picture {
@@ -702,15 +703,90 @@ button {
 }
 
 .teaser {
-  background: var(--section-color);
+  padding: 0 40px;
   padding-top: 192px;
   padding-bottom: 96px;
-  padding: 0 40px;
+}
+
+.title {
+  font-weight: 900;
+  font-size: 64px;
+  line-height: 78px;
+  text-align: center;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: #FFf;
+}
+
+.characters__container {
+  padding: 96px 15px;
+}
+.characters__title {
+  margin-bottom: 80px;
+}
+.characters__cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 24px;
+}
+.characters__card {
+  width: 442px;
+  height: 646px;
+  padding: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #FFF;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.characters__card:hover {
+  cursor: url("../icons/cursor.svg"), auto;
+  background: #fff;
+  color: #111;
+}
+.characters__card:hover .characters__card-text {
+  color: #111;
+}
+.characters__card:focus {
+  cursor: url("../icons/cursor.svg"), auto;
+  background: #fff;
+  color: #111;
+}
+.characters__card:focus .characters__card-text {
+  color: #111;
+}
+.characters__card-img {
+  margin-bottom: 24px;
+  width: 100%;
+}
+.characters__card-title {
+  margin-bottom: 12px;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+.characters__card-text {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 18px;
+  text-align: justify;
+  color: rgba(255, 255, 255, 0.4);
 }
 
 @media (max-width: 1200px) {
   .container {
     max-width: 960px;
+  }
+  .characters__container {
+    padding-left: 0;
   }
 }
 @media (max-width: 992px) {
@@ -761,10 +837,25 @@ button {
     padding-top: 80px;
     padding-bottom: 40px;
   }
+  .characters__cards {
+    gap: 16px;
+  }
+  .characters__card {
+    background: #fff;
+    color: #111;
+    padding: 16px;
+  }
+  .characters__card-text {
+    color: #111;
+  }
 }
 @media (max-width: 768px) {
   .container {
     max-width: 540px;
+  }
+  .title {
+    font-size: 28px;
+    line-height: 34px;
   }
   .no-webp .promo {
     background-image: url("../img/promo/bg-mobile.jpg"); }

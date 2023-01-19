@@ -13,5 +13,6 @@ export default () => {
 
     lowerbar.addEventListener('animationend', () => {
         lowerbar.style.display = 'none'
+        lowerbar.classList.remove('fadeOut_04s')
     })
 }
