@@ -17,6 +17,7 @@ tns({
     mousedrag: true,
     loop: false,
     preventScrollOnTouch: 'auto',
+    arrowKeys: true,
     responsive: {
         375: {
             items: 1,

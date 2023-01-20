@@ -12,7 +12,15 @@ export default () => {
             }
         })
     })
+
     characterCardsWrapper.addEventListener('mouseout', () => {
         charactersCards.forEach(card => card.style.opacity = '1')
+    })
+
+    charactersCards[0].addEventListener('mouseover', () => {
+        charactersCards[0].classList.add('card-animation__heat')
+    })
+    charactersCards[0].addEventListener('mouseout', () => {
+        charactersCards[0].classList.remove('card-animation__heat')
     })
 }
