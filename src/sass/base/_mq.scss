@@ -38,7 +38,6 @@
             height: 32px;
             margin-right: 10px;
             margin-bottom: auto;
-            padding: 4px;
         }
 
         &__text {
@@ -70,6 +69,16 @@
     }
 
     .characters {
+
+        &__container {
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+
+        &__title {
+            margin-bottom: 40px;
+        }
+
         &__cards {
             gap: 16px;
         }
@@ -99,13 +108,14 @@
             grid-template-columns: 1fr;
             gap: 16px;
 
-            &__right {
-                grid-column: 1/1;
-                min-height: 599px;
-            }
-
             &__left {
                 justify-content: flex-start;
+                height: 100%;
+            }
+
+            &__right {
+                grid-column: 1/1;
+                height: 599px;
             }
 
             &__item-header {

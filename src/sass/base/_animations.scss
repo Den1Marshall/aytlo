@@ -57,25 +57,3 @@
         opacity: 1;
     }
 }
-
-.card-animation__heat {
-    animation: heat 4s linear infinite;
-}
-
-@keyframes heat {
-    from {
-        background-image: url('../img/characters/heat1.jpg');
-    }
-
-    50% {
-        background-image: url('../img/characters/heat2.jpg');
-    }
-
-    75% {
-        background-image: url('../img/characters/heat3.jpg');
-    }
-
-    to {
-        background-image: url('../img/characters/heat4.jpg');
-    }
-}

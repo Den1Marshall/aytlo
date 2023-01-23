@@ -19,22 +19,6 @@ export default () => {
     })
 })
     const accordionRightBg = document.querySelector('.accordion__right')
-
-    if (window.matchMedia("(max-width: 576px)").matches) {
-        accordionHeaders[0].addEventListener('click', () => {
-            accordionRightBg.style.backgroundImage = `url('img/accordion/right/1-mobile.png')`
-        })
-        accordionHeaders[1].addEventListener('click', () => {
-            accordionRightBg.style.backgroundImage = `url('img/accordion/right/2-mobile.png')`
-        })
-        accordionHeaders[2].addEventListener('click', () => {
-            accordionRightBg.style.backgroundImage = `url('img/accordion/right/3-mobile.png')`
-        })
-        accordionHeaders[3].addEventListener('click', () => {
-            accordionRightBg.style.backgroundImage = `url('img/accordion/right/4-mobile.png')`
-        })
-      }
-      
     accordionHeaders[0].addEventListener('click', () => {
         accordionRightBg.style.backgroundImage = `url('img/accordion/right/1.png')`
     })

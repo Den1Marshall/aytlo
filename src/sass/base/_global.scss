@@ -56,15 +56,10 @@ a {
     }
 }
 
-:focus {
-
-}
-
-:focus {
-    outline: 0;
-}
-
 button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: rgba($color: #000000, $alpha: 0);
     border: 0;
     cursor: pointer;

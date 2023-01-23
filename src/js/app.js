@@ -3,12 +3,14 @@ import lowerbarAddEventListeners from './modules/lowerbar';
 import headerMobile from './modules/headerMobile';
 import charactersCards from './modules/charactersCards';
 import accordion from './modules/accordion';
+import chooseBlock from './modules/chooseBlock';
 
 isWebp()
 lowerbarAddEventListeners()
 headerMobile()
 charactersCards()
 accordion()
+chooseBlock()
 
 tns({
     container: '.characters__cards',
@@ -42,4 +44,18 @@ tns({
             items: 4
         }
     }
+})
+
+tns({
+    container: '.choose__slider',
+    controlsContainer: '.choose__slider-controls',
+    navContainer: '.choose__slider-nav',
+    loop: false,
+})
+
+tns({
+    container: '.choose__slider-heat',
+    controlsContainer: '.choose__slider-controls',
+    navContainer: '.choose__slider-nav',
+    loop: false,
 })
