@@ -1,0 +1,42 @@
+.footer {
+    background: #000;
+
+    &__container {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__copyright {
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 18px;
+        text-align: justify;
+        text-transform: uppercase;
+        color: #FFF;
+        opacity: 0.4;
+    }
+
+    &__social {
+        display: flex;
+        gap: 28px;
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 12px;
+        line-height: 15px;
+        text-transform: uppercase;
+        color: #fff;
+        opacity: .4;
+        &:hover {
+            opacity: 1;
+        }
+        &:focus {
+            opacity: 1;
+        }
+    }
+}

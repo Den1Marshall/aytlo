@@ -1160,6 +1160,55 @@ button {
 .no-webp .choose__slider-nav-item--heat :nth-child(6) {
   background-image: url("../img/characters/heat1.jpg"); }
 
+.footer {
+  background: #000;
+}
+.footer__container {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.footer__copyright {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 18px;
+  text-align: justify;
+  text-transform: uppercase;
+  color: #FFF;
+  opacity: 0.4;
+}
+.footer__social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 28px;
+}
+.footer__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #fff;
+  opacity: 0.4;
+}
+.footer__link:hover {
+  opacity: 1;
+}
+.footer__link:focus {
+  opacity: 1;
+}
+
 @media (max-width: 1200px) {
   .container {
     max-width: 960px;
