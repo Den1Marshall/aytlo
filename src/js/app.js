@@ -12,7 +12,7 @@ charactersCards()
 accordion()
 chooseBlock()
 
-tns({
+const charactersSlider = tns({
     container: '.characters__cards',
     controls: false,
     nav: false,
@@ -46,16 +46,30 @@ tns({
     }
 })
 
-tns({
+const chooseSliderAsura = tns({
     container: '.choose__slider',
-    controlsContainer: '.choose__slider-controls',
     navContainer: '.choose__slider-nav',
+    controlsContainer: '.choose__slider-controls',
     loop: false,
 })
 
-tns({
-    container: '.choose__slider-heat',
+const chooseSliderHeat = tns({
+    container: '.choose__slider--heat',
     controlsContainer: '.choose__slider-controls',
-    navContainer: '.choose__slider-nav',
+    navContainer: '.choose__slider-nav--heat',
+    loop: false,
+})
+
+const chooseSliderJumper = tns({
+    container: '.choose__slider--jumper',
+    controlsContainer: '.choose__slider-controls',
+    navContainer: '.choose__slider-nav--jumper',
+    loop: false,
+})
+
+const chooseSliderBeestyx = tns({
+    container: '.choose__slider--beestyx',
+    controlsContainer: '.choose__slider-controls',
+    navContainer: '.choose__slider-nav--beestyx',
     loop: false,
 })

@@ -1,54 +1,44 @@
 .fadeOut_01s {
-    animation: fadeOut .1s linear 1 normal;
+    animation: fade .1s linear 1 reverse;
 }
 
 .fadeOut_02s {
-    animation: fadeOut .2s linear 1 normal;
+    animation: fade .2s linear 1 reverse;
 }
 
 .fadeOut_03s {
-    animation: fadeOut .3s linear 1 normal;
+    animation: fade .3s linear 1 reverse;
 }
 
 .fadeOut_04s {
-    animation: fadeOut .4s linear 1 normal;
+    animation: fade .4s linear 1 reverse;
 }
 
 .fadeOut_05s {
-    animation: fadeOut .5s linear 1 normal;
+    animation: fade .5s linear 1 reverse;
 }
 
 .fadeIn_01s {
-    animation: fadeIn .1s linear 1 normal;
+    animation: fade .1s linear 1 normal;
 }
 
 .fadeIn_02s {
-    animation: fadeIn .2s linear 1 normal;
+    animation: fade .2s linear 1 normal;
 }
 
 .fadeIn_03s {
-    animation: fadeIn .3s linear 1 normal;
+    animation: fade .3s linear 1 normal;
 }
 
 .fadeIn_04s {
-    animation: fadeIn .4s linear 1 normal;
+    animation: fade .4s linear 1 normal;
 }
 
 .fadeIn_05s {
-    animation: fadeIn .5s linear 1 normal;
+    animation: fade .5s linear 1 normal;
 }
 
-@keyframes fadeOut {
-    from {
-        opacity: 1;
-    }
-
-    to {
-        opacity: 0;
-    }
-}
-
-@keyframes fadeIn {
+@keyframes fade {
     from {
         opacity: 0;
     }

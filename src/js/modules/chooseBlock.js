@@ -1,5 +1,15 @@
 export default () => {
+    'use strict'
     const chooseBlockBtns = document.querySelectorAll('.choose__buttons-btn');
+    const sliders = document.querySelectorAll('.choose__slider')
+    const navs = document.querySelectorAll('.choose__slider-nav')
+    const sliderSlides = document.querySelectorAll('.choose__slider-slide');
+    const sliderNavItems = document.querySelectorAll('.choose__slider-nav-item');
+
+    for (let i = 0; i < sliderSlides.length; i++) {
+        sliderNavItems[i].style.backgroundImage = `url('${(sliderSlides[i].src).substr(27, 27)}')`
+    }
+
 
     chooseBlockBtns.forEach(button => {
         button.addEventListener('click', e => {
@@ -7,42 +17,36 @@ export default () => {
 
             if (e.target) {
                 e.target.classList.add('choose__buttons-btn--active')
-            };
-
-            const asuraSlider = document.querySelector('.choose__slider');
-            const heatSlider = document.querySelector('.choose__slider-heat');
-            // const jumperSlider = document.querySelector('.choose__slider-jumper');
-            // const beestyxSlider = document.querySelector('.choose__slider-beestyx');
-            const sliders = [asuraSlider, heatSlider,];
-
-            const asuraNav = document.querySelector('.choose__slider-nav');
-            const heatNav = document.querySelector('.choose__slider-nav--heat');
-            const navs = [asuraNav, heatNav,];
-
-            const clearSliders = () => {
-                sliders.forEach(slider => slider.style.display = 'none')
-                navs.forEach(nav => nav.style.display = 'none')
             }
 
-            // displaying current character
             if (e.target.dataset.character === 'asura') {
-                clearSliders()
-                asuraSlider.style.display = 'flex'
-                asuraNav.style.display = 'flex'
+                sliders.forEach(slider => slider.dataset.character === 'asura' ? slider.style.display = 'flex' : slider.style.display = 'none')
+                navs.forEach(nav => nav.dataset.character === 'asura' ? nav.style.display = 'flex' : nav.style.display = 'none')
             }
+
             if (e.target.dataset.character === 'heat') {
-                clearSliders()
-                heatSlider.style.display = 'flex'
-                heatNav.style.display = 'flex'
+                sliders.forEach(slider => slider.dataset.character === 'heat' ? slider.style.display = 'flex' : slider.style.display = 'none')
+                navs.forEach(nav => nav.dataset.character === 'heat' ? nav.style.display = 'flex' : nav.style.display = 'none')
             }
-            // if (e.target.dataset.character === 'jumper') {
-            //     sliders.forEach(slider => slider.style.display = 'none')
-            //     jumperSlider.style.display = 'flex'
-            // }
-            // if (e.target.dataset.character === 'beestyx') {
-            //     sliders.forEach(slider => slider.style.display = 'none')
-            //     beestyxSlider.style.display = 'flex'
-            // }
+
+            if (e.target.dataset.character === 'jumper') {
+                sliders.forEach(slider => slider.dataset.character === 'jumper' ? slider.style.display = 'flex' : slider.style.display = 'none')
+                navs.forEach(nav => nav.dataset.character === 'jumper' ? nav.style.display = 'flex' : nav.style.display = 'none')
+            }
+
+            if (e.target.dataset.character === 'beestyx') {
+                sliders.forEach(slider => slider.dataset.character === 'beestyx' ? slider.style.display = 'flex' : slider.style.display = 'none')
+                navs.forEach(nav => nav.dataset.character === 'beestyx' ? nav.style.display = 'flex' : nav.style.display = 'none')
+            }
         })
+    })
+
+    const goFutherBtn = document.querySelector('.choose__right-btn');
+
+    goFutherBtn.addEventListener('click', () => {
+        const chooseBlock = document.querySelector('.choose__block');
+        const chooseBlockFinal = document.querySelector('.choose__block-final')
+        chooseBlock.style.display = 'none';
+        chooseBlockFinal.style.display = 'flex'
     })
 }

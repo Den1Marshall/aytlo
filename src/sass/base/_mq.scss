@@ -135,6 +135,56 @@
             }
         }
     }
+
+    .choose {
+
+        &__block {
+            grid-template-columns: 1fr;
+            gap: 124px;
+        }
+
+        &__left {
+        }
+
+        &__right {
+            justify-content: center;
+            align-items: center;
+
+            &-block {
+                width: 100%;
+            }
+
+            &-btn {
+                width: 100%;
+            }
+        }
+
+        &__slider {
+            &-nav {
+                bottom: -100px;
+            }
+            &-controls {
+                top: 50%;
+            }
+        }
+    }
+
+    .footer {
+        &__container {
+            flex-direction: column-reverse;
+            align-items: center;
+            gap: 16px;
+        }
+
+        &__copyright {
+            max-width: 343px;
+            text-align: center;
+        }
+
+        &__link {
+            opacity: 1;
+        }
+    }
 }
 
 // large mobiles
@@ -151,6 +201,70 @@
     .promo {
         background-image: url('../img/promo/bg-mobile.jpg');
     }
+
+    .choose {
+        &__title {
+            max-width: 343px;
+            margin: 0 auto;
+            margin-bottom: 40px;
+        }
+
+        &__buttons {
+            margin-bottom: 52px;
+            &-btn {
+                width: 104px;
+                height: 39px;
+                // text
+                font-size: 12px;
+                line-height: 15px;
+            }
+        }
+
+        &__block {
+            gap: 64px;
+
+            &-title {
+                font-size: 15px;
+                line-height: 18px;
+            }
+        }
+
+        &__right {
+            &-block {
+                padding: 20px;
+
+                &-text {
+                    font-size: 12px;
+                }
+            }
+
+            &-btn {
+                margin-top: 8px;
+            }
+        }
+
+        &__slider {
+            &-nav {
+                bottom: -24px;
+                margin: 0 auto;
+                justify-content: center;
+                gap: 12px;
+                .tns-nav-active {
+                    opacity: 1;
+                }
+                &-item {
+                    width: 8px;
+                    height: 8px;
+                    background-color: #fff;
+                    background-image: none !important;
+                    border-radius: 100%;
+                    opacity: .4;
+                }
+            }
+        }
+    }
+
+    
 }
 
 // small devices
