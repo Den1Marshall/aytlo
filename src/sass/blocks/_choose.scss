@@ -60,9 +60,21 @@
     }
 
     &__block-final {
-        max-width: 1218px;
-        display: flex;
+        display: none;
+        grid-template-columns: repeat(2, 597px);
+        grid-template-rows: 592px;
+        justify-content: center;
         gap: 24px;
+        animation: fade .3s 1 forwards;
+
+        img {
+            width: 100%;
+        }
+
+        &-right {
+            padding: 40px 40px 120px 40px;
+            background: #19181D;
+        }
     }
 
     &__left {
@@ -120,6 +132,19 @@
             }
             &:focus {
                 opacity: .4;
+            }
+
+            &--form {
+                position: relative;
+                &::after {
+                    content: " ";
+                    position: absolute;
+                    left: 76px;
+                    width: 25px;
+                    height: 25px;
+                    background: url('../icons/choose/twitter.svg');
+                }
+                cursor: pointer;
             }
         }
     }

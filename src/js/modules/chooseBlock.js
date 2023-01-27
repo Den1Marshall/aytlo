@@ -40,13 +40,4 @@ export default () => {
             }
         })
     })
-
-    const goFutherBtn = document.querySelector('.choose__right-btn');
-
-    goFutherBtn.addEventListener('click', () => {
-        const chooseBlock = document.querySelector('.choose__block');
-        const chooseBlockFinal = document.querySelector('.choose__block-final')
-        chooseBlock.style.display = 'none';
-        chooseBlockFinal.style.display = 'flex'
-    })
 }

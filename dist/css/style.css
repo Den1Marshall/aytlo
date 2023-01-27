@@ -409,48 +409,48 @@ button {
   font-weight: 500;
 }
 .fadeOut_01s {
-  animation: fade 0.1s linear 1 reverse;
+  animation: fade 0.1s 1 reverse;
 }
 
 .fadeOut_02s {
-  animation: fade 0.2s linear 1 reverse;
+  animation: fade 0.2s 1 reverse;
 }
 
 .fadeOut_03s {
-  animation: fade 0.3s linear 1 reverse;
+  animation: fade 0.3s 1 reverse;
 }
 
 .fadeOut_04s {
-  animation: fade 0.4s linear 1 reverse;
+  animation: fade 0.4s 1 reverse;
 }
 
 .fadeOut_05s {
-  animation: fade 0.5s linear 1 reverse;
+  animation: fade 0.5s 1 reverse;
 }
 
 .fadeIn_01s {
-  -webkit-animation: fade 0.1s linear 1 normal;
-          animation: fade 0.1s linear 1 normal;
+  -webkit-animation: fade 0.1s 1 normal;
+          animation: fade 0.1s 1 normal;
 }
 
 .fadeIn_02s {
-  -webkit-animation: fade 0.2s linear 1 normal;
-          animation: fade 0.2s linear 1 normal;
+  -webkit-animation: fade 0.2s 1 normal;
+          animation: fade 0.2s 1 normal;
 }
 
 .fadeIn_03s {
-  -webkit-animation: fade 0.3s linear 1 normal;
-          animation: fade 0.3s linear 1 normal;
+  -webkit-animation: fade 0.3s 1 normal;
+          animation: fade 0.3s 1 normal;
 }
 
 .fadeIn_04s {
-  -webkit-animation: fade 0.4s linear 1 normal;
-          animation: fade 0.4s linear 1 normal;
+  -webkit-animation: fade 0.4s 1 normal;
+          animation: fade 0.4s 1 normal;
 }
 
 .fadeIn_05s {
-  -webkit-animation: fade 0.5s linear 1 normal;
-          animation: fade 0.5s linear 1 normal;
+  -webkit-animation: fade 0.5s 1 normal;
+          animation: fade 0.5s 1 normal;
 }
 
 @-webkit-keyframes fade {
@@ -986,11 +986,24 @@ button {
   color: #FFF;
 }
 .choose__block-final {
-  max-width: 1218px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
+  -ms-grid-columns: (597px)[2];
+  grid-template-columns: repeat(2, 597px);
+  -ms-grid-rows: 592px;
+  grid-template-rows: 592px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   gap: 24px;
+  -webkit-animation: fade 0.3s 1 forwards;
+          animation: fade 0.3s 1 forwards;
+}
+.choose__block-final img {
+  width: 100%;
+}
+.choose__block-final-right {
+  padding: 40px 40px 120px 40px;
+  background: #19181D;
 }
 .choose__left {
   position: relative;
@@ -1051,6 +1064,18 @@ button {
 }
 .choose__right-btn:focus {
   opacity: 0.4;
+}
+.choose__right-btn--form {
+  position: relative;
+  cursor: pointer;
+}
+.choose__right-btn--form::after {
+  content: " ";
+  position: absolute;
+  left: 76px;
+  width: 25px;
+  height: 25px;
+  background: url("../icons/choose/twitter.svg");
 }
 .choose__slider {
   -webkit-animation: fade 0.3s linear 1 forwards;
@@ -1143,6 +1168,39 @@ button {
 }
 .choose__slider-nav-item:focus {
   opacity: 1;
+}
+
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+}
+.form__input-text {
+  width: 100%;
+  height: 56px;
+  padding: 16px 20px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 0;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: -0.02em;
+  color: rgba(255, 255, 255, 0.4);
+  -webkit-transition: all 0.1s;
+  -o-transition: all 0.1s;
+  transition: all 0.1s;
+}
+.form__input-text:hover {
+  background: rgba(255, 255, 255, 0.16);
+}
+.form__input-text:focus {
+  background: rgba(255, 255, 255, 0.16);
+  outline: 0;
 }
 
 .footer {

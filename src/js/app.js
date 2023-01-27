@@ -4,6 +4,7 @@ import headerMobile from './modules/headerMobile';
 import charactersCards from './modules/charactersCards';
 import accordion from './modules/accordion';
 import chooseBlock from './modules/chooseBlock';
+import form from './modules/form';
 
 isWebp()
 lowerbarAddEventListeners()
@@ -11,6 +12,7 @@ headerMobile()
 charactersCards()
 accordion()
 chooseBlock()
+form()
 
 const charactersSlider = tns({
     container: '.characters__cards',
