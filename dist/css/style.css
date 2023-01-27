@@ -470,8 +470,50 @@ button {
     opacity: 1;
   }
 }
+.loader {
+  position: fixed;
+  z-index: 9999;
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: black;
+}
+.loader span {
+  display: block;
+  width: 70px;
+  height: 70px;
+  border: 3px solid;
+  border-radius: 50%;
+  border-color: transparent #fff #fff;
+  -webkit-animation: cssload-spin 690ms infinite linear;
+          animation: cssload-spin 690ms infinite linear;
+}
+@-webkit-keyframes cssload-spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes cssload-spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
 .no-webp .promo {
   background: url("../img/promo/bg.jpg") center center/cover no-repeat; }
+
 .promo {
   min-height: 100vh;
 }
@@ -987,8 +1029,8 @@ button {
 }
 .choose__block-final {
   display: none;
-  -ms-grid-columns: (597px)[2];
-  grid-template-columns: repeat(2, 597px);
+  -ms-grid-columns: (minmax(100px, 597px))[2];
+  grid-template-columns: repeat(2, minmax(100px, 597px));
   -ms-grid-rows: 592px;
   grid-template-rows: 592px;
   -webkit-box-pack: center;
@@ -1078,8 +1120,8 @@ button {
   background: url("../icons/choose/twitter.svg");
 }
 .choose__slider {
-  -webkit-animation: fade 0.3s linear 1 forwards;
-          animation: fade 0.3s linear 1 forwards;
+  -webkit-animation: fade 1s 1 forwards;
+          animation: fade 1s 1 forwards;
 }
 .choose__slider-slide {
   height: 100%;
@@ -1138,8 +1180,8 @@ button {
       -ms-flex-align: center;
           align-items: center;
   cursor: pointer;
-  -webkit-animation: fade 0.3s ease-in-out 1 forwards;
-          animation: fade 0.3s ease-in-out 1 forwards;
+  -webkit-animation: fade 1s 1 forwards;
+          animation: fade 1s 1 forwards;
 }
 .choose__slider-nav--heat {
   display: none;
@@ -1180,7 +1222,7 @@ button {
           flex-direction: column;
   gap: 20px;
 }
-.form__input-text {
+.form__input {
   width: 100%;
   height: 56px;
   padding: 16px 20px;
@@ -1195,12 +1237,22 @@ button {
   -o-transition: all 0.1s;
   transition: all 0.1s;
 }
-.form__input-text:hover {
+.form__input:hover {
   background: rgba(255, 255, 255, 0.16);
 }
-.form__input-text:focus {
+.form__input:focus {
   background: rgba(255, 255, 255, 0.16);
   outline: 0;
+}
+.form__input:valid {
+  background: rgba(255, 255, 255, 0.01);
+}
+.form__input:blank {
+  background: rgb(255, 255, 255);
+}
+.form__input :disabled {
+  background: rgba(255, 255, 255, 0.08);
+  opacity: 0.4;
 }
 
 .footer {

@@ -76,7 +76,7 @@
   />
   <link
     rel="preload"
-    href="fonts/DrukWide-Heavy.woff2"
+    href="fonts/Druk-Wide-Heavy.woff2"
     as="font"
     type="font/woff2"
     crossorigin
@@ -90,6 +90,11 @@
 </head>
 
   <body>
+    <div class="loader">
+  <span></span>
+</div>
+
+    <!--  -->
     <section class="promo">
   <div class="container promo__container"><header class="header">
   <a href="#">
@@ -301,7 +306,11 @@
     </div>
     <section class="choose__block">
       <section class="choose__left">
-        <div class="choose__slider" data-character="asura">
+        <div
+          class="choose__slider"
+          data-character="asura"
+          style="display: flex"
+        >
           <img
             class="choose__slider-slide"
             src="img/characters/asura1.jpg"
@@ -494,22 +503,25 @@
             type="text"
             name=""
             id=""
-            class="form__input-text"
+            class="form__input"
             placeholder="@user_name 1"
+            required
           />
           <input
             type="text"
             name=""
             id=""
-            class="form__input-text"
+            class="form__input"
             placeholder="@user_name 2"
+            required
           />
           <input
             type="text"
             name=""
             id=""
-            class="form__input-text"
+            class="form__input"
             placeholder="@user_name 3"
+            required
           />
           <input
             class="choose__right-btn choose__right-btn--form"
@@ -550,6 +562,13 @@
 </footer>
 
     <!--  -->
+    <script>
+      window.addEventListener("load", () => {
+        const loader = document.querySelector(".loader");
+        loader.classList.add("fadeOut_03s");
+        loader.addEventListener("animationend", () => loader.remove());
+      });
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
 <script src="js/app.min.js"></script>
 

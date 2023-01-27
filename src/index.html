@@ -2,6 +2,8 @@
 <html lang="en">
   @@include('html/head.html')
   <body>
+    @@include('html/loader.html')
+    <!--  -->
     @@include('html/promo.html')
     <!--  -->
     @@include('html/header-mobile.html')
@@ -18,6 +20,13 @@
     <!--  -->
     @@include('html/footer.html')
     <!--  -->
+    <script>
+      window.addEventListener("load", () => {
+        const loader = document.querySelector(".loader");
+        loader.classList.add("fadeOut_03s");
+        loader.addEventListener("animationend", () => loader.remove());
+      });
+    </script>
     @@include('html/script.html')
   </body>
 </html>
