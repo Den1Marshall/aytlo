@@ -4,15 +4,15 @@ export default () => {
     const lowerbarClose = document.querySelector('.lowerbar__close');
 
     lowerbarLink.addEventListener('click', () => {
-        lowerbar.classList.add('fadeOut_04s')
+        lowerbar.classList.add('fadeOut_03s')
     })
 
     lowerbarClose.addEventListener('click', () => {
-        lowerbar.classList.add('fadeOut_04s')
+        lowerbar.classList.add('fadeOut_03s')
     })
 
     lowerbar.addEventListener('animationend', () => {
         lowerbar.style.display = 'none'
-        lowerbar.classList.remove('fadeOut_04s')
+        lowerbar.classList.remove('fadeOut_03s')
     })
 }

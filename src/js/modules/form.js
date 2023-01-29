@@ -1,39 +1,47 @@
 export default () => {
-    'use strict'
     const goFutherBtn = document.querySelector('.choose__right-btn');
+    const chooseSliders = document.querySelectorAll('.choose__slider');
 
     const chooseBtns = document.querySelector('.choose__buttons');
     const chooseBlock = document.querySelector('.choose__block');
     const chooseBlockFinal = document.querySelector('.choose__block-final');
     const chooseBlockFinalImage = chooseBlockFinal.querySelector('source');
-    const chooseSliders = document.querySelectorAll('.choose__slider');
 
     goFutherBtn.addEventListener('click', () => {
         chooseBlockFinalImage.srcset = Array.from(chooseSliders).find(slider => slider.style.display === 'flex').querySelector('.tns-slide-active').src
         chooseBlockFinalImage.src = Array.from(chooseSliders).find(slider => slider.style.display === 'flex').querySelector('.tns-slide-active').src
-        chooseBlock.classList.add('fadeOut_02s')
-        chooseBtns.classList.add('fadeOut_02s')
-        chooseBlock.addEventListener('animationend', () => {
-            chooseBlock.classList.remove('fadeOut_02s')
-            chooseBtns.classList.remove('fadeOut_02s')
-            chooseBlock.style.display = 'none'
-            chooseBtns.style.display = 'none'
-            chooseBlockFinal.style.display = 'grid'
-        })
+        // chooseBlock.classList.add('fadeOut_02s')
+        // chooseBtns.classList.add('fadeOut_02s')
+        // chooseBlock.addEventListener('animationend', () => {
+        //     chooseBlock.classList.remove('fadeOut_02s')
+        //     chooseBtns.classList.remove('fadeOut_02s')
+        //     chooseBlock.style.display = 'none'
+        //     chooseBtns.style.display = 'none'
+        //     chooseBlockFinal.style.display = 'grid'
+        // })
+        chooseBlock.style.display = 'none'
+        chooseBtns.style.display = 'none'
+        chooseBlockFinal.style.display = 'grid'
     })
 
-    // const formInputs = Array.from(document.querySelectorAll('.form__input-text'))
+    const goBackBtn = document.querySelector('.choose__go-back-btn');
 
-    // const checkForEmptyInput = () => formInputs.filter(input => input.value !== '').forEach(input => input.style.background = 'rgba(255, 255, 255, 0.08)')
+    goBackBtn.addEventListener('click', () => {
+        chooseBlock.style.display = 'grid'
+        chooseBtns.style.display = 'flex'
+        chooseBlockFinal.style.display = 'none'
+    })
 
-    // formInputs.forEach(input => input.addEventListener('input', checkForEmptyInput))
+    const shareInTwitterBtn = document.querySelector('.choose__right-btn--form');
+    const formInputs = Array.from(document.querySelectorAll('.form__input'))
 
-    const inputs = Array.from(document.querySelectorAll('form__input'))
+    shareInTwitterBtn.addEventListener('click', () => {
+        let text = ``;
+        for (let i = 0; i < formInputs.length; i++) {
+            text += `${formInputs[i].value}%20`
+        } 
+        shareInTwitterBtn.setAttribute('href', `https://twitter.com/intent/tweet?text=${text}`)
+    })
 
-    const checkInput = () => {
-
-        inputs.filter(input => input.value.contains('@')) ? null : console.log('pizdec');
-    }
-
-    inputs.forEach(input => input.addEventListener('input', checkInput))
+    console.log(    shareInTwitterBtn.getAttribute('href'));
 }

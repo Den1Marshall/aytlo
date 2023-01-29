@@ -464,7 +464,7 @@
               Click the "Share in Twitter" button
             </li>
             <li class="choose__right-block-text">
-              weet 3 of your friends (you can specify famous people or APTOS)
+              Tweet 3 of your friends (you can specify famous people or APTOS)
             </li>
             <li class="choose__right-block-text">Click "Go to Twitter"</li>
             <li class="choose__right-block-text">
@@ -493,12 +493,12 @@
     <article class="choose__block-final">
       <picture><source srcset="img/characters/asura1.webp" type="image/webp"><img src="img/characters/asura1.jpg" alt="Your choosen character" /></picture>
       <div class="choose__block-final-right">
-        <h3 class="choose__block-title">last step</h3>
-        <p class="choose__right-block-text">
-          Just tag your friends on Twitter. Let everyone know about AYTLO. We
-          are expanding. Fasten your seatbelts.
-        </p>
         <form action="" class="form">
+          <h3 class="choose__block-title">last step</h3>
+          <p class="choose__right-block-text">
+            Just tag your friends on Twitter. Let everyone know about AYTLO. We
+            are expanding. Fasten your seatbelts.
+          </p>
           <input
             type="text"
             name=""
@@ -523,12 +523,17 @@
             placeholder="@user_name 3"
             required
           />
-          <input
-            class="choose__right-btn choose__right-btn--form"
-            type="submit"
-            value="share in twitter"
-          />
         </form>
+        <div class="choose__block-final-right-btns">
+          <button class="choose__go-back-btn">go back</button>
+          <a
+            class="choose__right-btn choose__right-btn--form"
+            href="https://twitter.com/intent/tweet?text="
+            target="_blank"
+            val
+            >share in twitter
+          </a>
+        </div>
       </div>
     </article>
   </div>
