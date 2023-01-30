@@ -1,5 +1,4 @@
 export default () => {
-    const goFutherBtn = document.querySelector('.choose__right-btn');
     const chooseSliders = document.querySelectorAll('.choose__slider');
 
     const chooseBtns = document.querySelector('.choose__buttons');
@@ -7,25 +6,16 @@ export default () => {
     const chooseBlockFinal = document.querySelector('.choose__block-final');
     const chooseBlockFinalImage = chooseBlockFinal.querySelector('source');
 
+    const goFutherBtn = document.querySelector('.choose__right-btn');
     goFutherBtn.addEventListener('click', () => {
         chooseBlockFinalImage.srcset = Array.from(chooseSliders).find(slider => slider.style.display === 'flex').querySelector('.tns-slide-active').src
         chooseBlockFinalImage.src = Array.from(chooseSliders).find(slider => slider.style.display === 'flex').querySelector('.tns-slide-active').src
-        // chooseBlock.classList.add('fadeOut_02s')
-        // chooseBtns.classList.add('fadeOut_02s')
-        // chooseBlock.addEventListener('animationend', () => {
-        //     chooseBlock.classList.remove('fadeOut_02s')
-        //     chooseBtns.classList.remove('fadeOut_02s')
-        //     chooseBlock.style.display = 'none'
-        //     chooseBtns.style.display = 'none'
-        //     chooseBlockFinal.style.display = 'grid'
-        // })
         chooseBlock.style.display = 'none'
         chooseBtns.style.display = 'none'
         chooseBlockFinal.style.display = 'grid'
     })
 
     const goBackBtn = document.querySelector('.choose__go-back-btn');
-
     goBackBtn.addEventListener('click', () => {
         chooseBlock.style.display = 'grid'
         chooseBtns.style.display = 'flex'
@@ -42,6 +32,4 @@ export default () => {
         } 
         shareInTwitterBtn.setAttribute('href', `https://twitter.com/intent/tweet?text=${text}`)
     })
-
-    console.log(    shareInTwitterBtn.getAttribute('href'));
 }
