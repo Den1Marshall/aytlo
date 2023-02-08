@@ -23,13 +23,40 @@ export default () => {
     })
 
     const shareInTwitterBtn = document.querySelector('.choose__right-btn--form');
-    const formInputs = Array.from(document.querySelectorAll('.form__input'))
+    const formInputs = Array.from(document.querySelectorAll('.form__input'));
+    const formInputsClose = document.querySelectorAll('.form__input', ':before')
 
-    shareInTwitterBtn.addEventListener('click', () => {
+    formInputsClose.forEach(close => close.addEventListener('contextmenu', e => {
+        e.target.innerHTML = ''
+    }))
+
+    formInputs.forEach(input => input.addEventListener('input', () => {
+        formInputs.forEach(input => {
+            input.textContent.length >= 1 ? input.classList.add('form__input--typing') : input.classList.remove('form__input--typing')
+        })
+    }))
+
+    shareInTwitterBtn.addEventListener('click', e => {
+
+        if (formInputs.find(input => input.innerHTML === '')) {
+            e.preventDefault()
+            formInputs.forEach(input => input.innerHTML === '' ? input.classList.add('form__input--empty') : input.classList.remove('form__input--empty'))
+        }
+
+        if (formInputs.find(input => (!input.innerHTML.includes('@')) || (input.innerHTML.length === 1) || (input.innerHTML.length >= 16))) {
+            e.preventDefault()
+            formInputs.forEach(input => (input.innerHTML !== '') && (!input.innerHTML.includes('@')) || (input.innerHTML.length === 1) || (input.innerHTML.length >= 16) ? input.classList.add('form__input--incorrect') : input.classList.remove('form__input--incorrect'))
+        }
+
+        else {formInputs.forEach(input => {
+            input.classList.remove('form__input--empty')
+            input.classList.remove('form__input--incorrect')
+        })}
+
         let text = ``;
-        for (let i = 0; i < formInputs.length; i++) {
-            text += `${formInputs[i].value}%20`
-        } 
+
+        formInputs.forEach(input => text += `${input.innerHTML}%20`)
+
         shareInTwitterBtn.setAttribute('href', `https://twitter.com/intent/tweet?text=${text}`)
     })
 }

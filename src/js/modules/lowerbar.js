@@ -1,18 +1,10 @@
-export default () => {
-    const lowerbar = document.querySelector('.lowerbar')
+import fadeOut from "./fadeOut";
+
+export default function() {
+    const lowerbar = document.querySelector('.lowerbar');
+    const lowerbarCloseBtn = document.querySelector('.lowerbar__close');
     const lowerbarLink = document.querySelector('.lowerbar__link');
-    const lowerbarClose = document.querySelector('.lowerbar__close');
 
-    lowerbarLink.addEventListener('click', () => {
-        lowerbar.classList.add('fadeOut_03s')
-    })
-
-    lowerbarClose.addEventListener('click', () => {
-        lowerbar.classList.add('fadeOut_03s')
-    })
-
-    lowerbar.addEventListener('animationend', () => {
-        lowerbar.style.display = 'none'
-        lowerbar.classList.remove('fadeOut_03s')
-    })
+    fadeOut(lowerbarCloseBtn, lowerbar, 400)
+    fadeOut(lowerbarLink, lowerbar, 400)
 }

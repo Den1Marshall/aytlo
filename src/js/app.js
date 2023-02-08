@@ -1,15 +1,13 @@
 import isWebp from './modules/isWebp';
-import lowerbarAddEventListeners from './modules/lowerbar';
 import headerMobile from './modules/headerMobile';
-import charactersCards from './modules/charactersCards';
+import lowerbar from './modules/lowerbar';
 import accordion from './modules/accordion';
 import chooseBlock from './modules/chooseBlock';
 import form from './modules/form';
 
 isWebp()
-lowerbarAddEventListeners()
 headerMobile()
-charactersCards()
+lowerbar()
 accordion()
 chooseBlock()
 form()

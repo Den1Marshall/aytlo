@@ -1,13 +1,12 @@
 export default () => {
-    'use strict'
     const chooseBlockBtns = document.querySelectorAll('.choose__buttons-btn');
-    const sliders = document.querySelectorAll('.choose__slider')
-    const navs = document.querySelectorAll('.choose__slider-nav')
+    const sliders = document.querySelectorAll('.choose__slider');
+    const navs = document.querySelectorAll('.choose__slider-nav');
     const sliderSlides = document.querySelectorAll('.choose__slider-slide');
     const sliderNavItems = document.querySelectorAll('.choose__slider-nav-item');
 
     for (let i = 0; i < sliderSlides.length; i++) {
-        sliderNavItems[i].style.backgroundImage = `url('${(sliderSlides[i].src).substr(27, 27)}')`
+        sliderNavItems[i].style.backgroundImage = `url('${(sliderSlides[i].src)}')`
     }
 
 

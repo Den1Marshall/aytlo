@@ -60,7 +60,7 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgba($color: #000000, $alpha: 0);
+    background: rgba($color: #000, $alpha: 0);
     border: 0;
     cursor: pointer;
 }
@@ -69,4 +69,14 @@ button {
     max-width: 1870px;
     padding: 0 15px;
     margin: 0 auto;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
