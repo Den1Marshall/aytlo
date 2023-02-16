@@ -7,14 +7,18 @@ export default function(clickTarget, changingElement, duration = 400, displayPro
                 setTimeout(() => {
                     changingElement.style.animation = ``
                 }, duration);
-                callback()
+                if (callback) {
+                    callback()
+                }
             } else {
                 changingElement.style.animation = `fade ${duration}ms 1 reverse`
                 setTimeout(() => {
                     changingElement.style.display = 'none'
                     changingElement.style.animation = ``
                 }, duration);
-                callback()
+                if (callback) {
+                    callback()
+                }
             }
         })
     } else {
@@ -24,14 +28,18 @@ export default function(clickTarget, changingElement, duration = 400, displayPro
             setTimeout(() => {
                 changingElement.style.animation = ``
             }, duration);
-            callback()
+            if (callback) {
+                callback()
+            }
         } else {
             changingElement.style.animation = `fade ${duration}ms 1 reverse`
             setTimeout(() => {
                 changingElement.style.display = 'none'
                 changingElement.style.animation = ``
             }, duration);
-            callback()
+            if (callback) {
+                callback()
+            }
         }
     }
 }

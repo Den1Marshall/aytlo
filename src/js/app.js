@@ -4,6 +4,10 @@ import lowerbar from './modules/lowerbar';
 import accordion from './modules/accordion';
 import chooseBlock from './modules/chooseBlock';
 import form from './modules/form';
+import footerDate from './modules/footer';
+
+import translatePage from './modules/translatePage';
+
 
 isWebp()
 headerMobile()
@@ -11,6 +15,10 @@ lowerbar()
 accordion()
 chooseBlock()
 form()
+footerDate()
+
+translatePage()
+
 
 const charactersSlider = tns({
     container: '.characters__cards',

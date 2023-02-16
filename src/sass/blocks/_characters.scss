@@ -34,15 +34,7 @@
         border: 1px solid rgba(255, 255, 255, 0.3);
         color: #FFF;
         transition: all .3s;
-        opacity: 1;
         &:hover {
-            background: #fff;
-            color: #111;
-            .characters__card-text {
-                color: #111;
-            }
-        }
-        &:focus {
             background: #fff;
             color: #111;
             .characters__card-text {
