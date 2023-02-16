@@ -1,4 +1,4 @@
-export default () => {
+export default async () => {
     const allLinksText = Array.from(document.querySelectorAll('a'));
     const allParaText = Array.from(document.querySelectorAll('p'));
     const h1Text = Array.from(document.querySelector('h1'));
@@ -11,3 +11,4 @@ export default () => {
 
     console.log(arr.forEach(textArray => textArray.forEach(elem => elem.textContent)))
 }
+

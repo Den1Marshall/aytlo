@@ -16,15 +16,6 @@
         &:hover {
             cursor: url('../icons/cursor.svg'), auto;
         }
-        &>:not(:hover) {
-            opacity: .4;
-        }
-        &:not(:hover) {
-            .characters__card {
-                opacity: 1;
-            }
-        }
-
     }
 
     &__card {

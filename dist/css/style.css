@@ -723,12 +723,6 @@ button {
 .characters__cards:hover {
   cursor: url("../icons/cursor.svg"), auto;
 }
-.characters__cards > :not(:hover) {
-  opacity: 0.4;
-}
-.characters__cards:not(:hover) .characters__card {
-  opacity: 1;
-}
 .characters__card {
   width: 442px;
   height: 646px;
@@ -1266,9 +1260,6 @@ button {
 .form__input::placeholder {
   color: rgba(255, 255, 255, 0.4);
 }
-.form__input:valid {
-  background: rgba(255, 255, 255, 0.08);
-}
 .form__input:hover {
   background: rgba(255, 255, 255, 0.16);
 }
@@ -1276,17 +1267,16 @@ button {
   background: rgba(255, 255, 255, 0.16);
   outline: 0;
 }
-.form__input :disabled {
+.form__input:disabled {
   background: rgba(255, 255, 255, 0.08);
   opacity: 0.4;
 }
-.form__input--empty {
+.form__input--error {
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 0, 0, 0.8);
 }
-.form__input--incorrect {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 0, 0, 0.8);
+.form__input--typing {
+  background: rgba(255, 255, 255, 0.08) !important;
 }
 .form__input-close {
   position: absolute;

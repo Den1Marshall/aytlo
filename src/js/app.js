@@ -1,23 +1,26 @@
 import isWebp from './modules/isWebp';
 import headerMobile from './modules/headerMobile';
 import lowerbar from './modules/lowerbar';
+import charactersHover from './modules/charactersHover';
 import accordion from './modules/accordion';
 import chooseBlock from './modules/chooseBlock';
 import form from './modules/form';
 import footerDate from './modules/footer';
 
-import translatePage from './modules/translatePage';
+// import translatePage from './modules/translatePage';
 
 
 isWebp()
 headerMobile()
 lowerbar()
+charactersHover()
 accordion()
 chooseBlock()
 form()
 footerDate()
 
-translatePage()
+// translatePage()
+
 
 
 const charactersSlider = tns({
